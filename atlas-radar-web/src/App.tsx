@@ -15,8 +15,7 @@ function App() {
     const buscarLeads = async () => {
         setLoading(true);
         try {
-            // ATENÇÃO: Substitua PORTA_DA_API pela porta que o Visual Studio abriu (ex: 5000, 7123, etc)
-            const url = `http://localhost:32768/api/buscar-leads?nicho=${nicho}&localizacao=${localizacao}`;
+            const url = `https://atlas-radar-api.onrender.com/api/buscar-leads?nicho=${nicho}&localizacao=${localizacao}`;
             const response = await fetch(url);
             const data = await response.json();
             setLeads(data);
